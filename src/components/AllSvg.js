@@ -187,3 +187,171 @@ export const Develope = props => {
     </svg>
   );
 };
+export const CancelBtn = props => {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M12 21.77A9.75 9.75 0 1121.75 12 9.76 9.76 0 0112 21.77zm0-18A8.25 8.25 0 1020.25 12 8.26 8.26 0 0012 3.77z"
+        fill="#000"
+      />
+      <path
+        d="M12 16.37a.76.76 0 01-.75-.75v-7.2a.75.75 0 111.5 0v7.2a.76.76 0 01-.75.75z"
+        fill="#000"
+      />
+      <path
+        d="M15.6 12.77H8.4a.75.75 0 110-1.5h7.2a.75.75 0 110 1.5z"
+        fill="#000"
+      />
+    </svg>
+  );
+};
+export const SprialCircle = props => {
+  return (
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...props}>
+      <path
+        fill="none"
+        stroke="#000"
+        strokeWidth={2}
+        d="M12 15a3 3 0 100-6 3 3 0 000 6zm3-3c4 3 5 7 5 7m-8 4c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11zm0-14c3-5 7-6 7-6m-7 12c-3 4-7 5-7 5m4-8C5 9 4 5 4 5"
+      />
+    </svg>
+  );
+};
+
+export const SvgComponent = props => {
+  return (
+    <svg
+      id="prefix__Layer_1"
+      data-name="Layer 1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 993 993"
+      {...props}
+    >
+      <defs>
+        <radialGradient
+          id="prefix__radial-gradient"
+          cx={512.061}
+          cy={512.121}
+          r={444.122}
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset={0.99} stopOpacity={0.5} />
+          <stop offset={1} stopOpacity={0} />
+        </radialGradient>
+        <radialGradient
+          id="prefix__radial-gradient-2"
+          cx={514.5}
+          cy={516.5}
+          r={496.5}
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset={0.913} />
+          <stop offset={1} stopOpacity={0} />
+        </radialGradient>
+        <radialGradient
+          id="prefix__radial-gradient-3"
+          cx={512.059}
+          cy={512.121}
+          r={486.273}
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset={0.99} stopColor="#fff" />
+          <stop offset={0.995} stopColor="#fdfdfd" />
+          <stop offset={0.997} stopColor="#f6f6f6" />
+          <stop offset={0.998} stopColor="#ebebeb" />
+          <stop offset={0.999} stopColor="#dadada" />
+          <stop offset={1} stopColor="#c7c7c7" />
+        </radialGradient>
+        <radialGradient
+          id="prefix__radial-gradient-5"
+          cx={494.061}
+          cy={492.121}
+          r={444.122}
+          xlinkHref="#prefix__radial-gradient"
+        />
+        <radialGradient
+          id="prefix__radial-gradient-6"
+          cx={5.295}
+          cy={1029.314}
+          r={4.653}
+          gradientTransform="matrix(94.65428 0 0 -94.65428 -7.154 97921.139)"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset={0} />
+          <stop offset={1} stopColor="#322f32" />
+        </radialGradient>
+        <radialGradient
+          id="prefix__radial-gradient-7"
+          cx={578.89}
+          cy={473.319}
+          r={353.942}
+          gradientTransform="matrix(1 0 0 1.09706 0 -45.942)"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop offset={0} stopColor="#c2c0c2" />
+          <stop offset={1} stopColor="#ebebeb" />
+        </radialGradient>
+        <clipPath id="prefix__clip-path" transform="translate(-18 -20)">
+          <path
+            id="prefix__SVGID"
+            className="prefix__cls-1"
+            d="M67.938 512.121c0 245.286 198.84 444.121 444.121 444.121s444.126-198.835 444.126-444.12C956.185 266.84 757.341 68 512.059 68S67.938 266.84 67.938 512.121"
+          />
+        </clipPath>
+        <clipPath id="prefix__clip-path-2" transform="translate(-18 -20)">
+          <path
+            d="M71.603 512.121c0 243.262 197.199 440.456 440.456 440.456s440.46-197.194 440.46-440.456c0-243.257-197.203-440.456-440.46-440.456S71.603 268.864 71.603 512.121"
+            fill="none"
+          />
+        </clipPath>
+        <style>{'.prefix__cls-1{fill:url(#prefix__radial-gradient)}'}</style>
+      </defs>
+      <path
+        d="M514.5 20C788.71 20 1011 242.29 1011 516.5S788.71 1013 514.5 1013 18 790.71 18 516.5 240.29 20 514.5 20"
+        transform="translate(-18 -20)"
+        shapeRendering="geometricPrecision"
+        fill="url(#prefix__radial-gradient-2)"
+      />
+      <path
+        d="M512.06 25.849c268.561 0 486.272 217.71 486.272 486.272s-217.71 486.273-486.273 486.273S25.786 780.684 25.786 512.12 243.497 25.85 512.06 25.85"
+        transform="translate(-18 -20)"
+        shapeRendering="geometricPrecision"
+        fill="url(#prefix__radial-gradient-3)"
+      />
+      <path
+        id="prefix__SVGID-2"
+        data-name="SVGID"
+        className="prefix__cls-1"
+        d="M67.938 512.121c0 245.286 198.84 444.121 444.121 444.121s444.126-198.835 444.126-444.12C956.185 266.84 757.341 68 512.059 68S67.938 266.84 67.938 512.121"
+        transform="translate(-18 -20)"
+        shapeRendering="geometricPrecision"
+      />
+      <g clipPath="url(#prefix__clip-path)">
+        <path
+          shapeRendering="geometricPrecision"
+          fill="url(#prefix__radial-gradient-5)"
+          d="M49.938 48h888.247v888.242H49.938z"
+        />
+      </g>
+      <g clipPath="url(#prefix__clip-path-2)">
+        <path
+          shapeRendering="geometricPrecision"
+          fill="url(#prefix__radial-gradient-6)"
+          d="M53.603 51.665H934.52v880.912H53.603z"
+        />
+      </g>
+      <path
+        d="M684.907 370.502a199.242 199.242 0 01-277.24 70.456 202.748 202.748 0 01-44.914-37.774 198.921 198.921 0 01-49.898-141.133c.284-5.79.768-11.562 1.527-17.31a198.517 198.517 0 012.977-16.873q1.897-8.578 4.547-16.962 2.572-8.16 5.864-16.074c2.274-5.485 4.81-10.854 7.546-16.122 2.882-5.547 6.073-10.944 9.482-16.184q4.714-7.249 10.044-14.062c3.854-4.951 7.95-9.727 12.27-14.277q6.542-6.887 13.67-13.162c4.838-4.262 9.912-8.25 15.14-12.022q4.042-2.917 8.236-5.611a244.394 244.394 0 00-109.082 323.486q.82 1.704 1.668 3.395.384.768.774 1.533a4.6 4.6 0 00.47.917c.324.36.405.299.9.29a194.69 194.69 0 017.736.021q7.144.154 14.266.815a199.577 199.577 0 01178.162 166.366 201.33 201.33 0 01.641 60.167 198.748 198.748 0 01-46.161 101.855 202.193 202.193 0 01-49.777 41.784 199.862 199.862 0 01-124.15 26.494 203.067 203.067 0 01-23.203-4.03 198.81 198.81 0 01-14.71-4.07 242.604 242.604 0 0068.547 18.972 247.036 247.036 0 0066.41-.798 243.53 243.53 0 00108.668-44.887 246.042 246.042 0 0059.734-63.074q1.04-1.588 2.057-3.19c.263-.415.85-1.07.775-1.51a8.494 8.494 0 00-1.051-1.944q-2.003-3.758-3.844-7.598-3.698-7.717-6.722-15.733a198.02 198.02 0 01-9.34-33.367 200.874 200.874 0 01.04-73.98 197.881 197.881 0 0121.358-59.255 199.08 199.08 0 01173.09-103.06q7.337-.05 14.663.425 7.066.47 14.088 1.418 6.952.95 13.828 2.394 6.73 1.42 13.355 3.29 6.489 1.841 12.843 4.118 6.44 2.313 12.708 5.064 6.39 2.79 12.562 6.046 6.165 3.243 12.1 6.907a191.776 191.776 0 0110.912 7.251q5.49 3.94 10.727 8.208c3.603 2.931 7.08 6.02 10.461 9.202q5.401 5.084 10.408 10.563 4.998 5.448 9.57 11.27c3.4 4.319 6.639 8.773 9.66 13.364a206.305 206.305 0 018.749 14.515 200.215 200.215 0 0110.068 21.366 206.974 206.974 0 017.973 24.371 243.74 243.74 0 00-51.678-120.94A245.663 245.663 0 00789.4 399.34a242.858 242.858 0 00-95.948-28.304q-4.267-.341-8.544-.534z"
+        transform="translate(-18 -20)"
+        shapeRendering="geometricPrecision"
+        fill="url(#prefix__radial-gradient-7)"
+      />
+    </svg>
+  );
+};

@@ -5,7 +5,8 @@ import PowerBotton from '../subComponents/PowerBotton';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import { NavLink } from 'react-router-dom';
-import { YinYang } from './AllSvg';
+// import { YinYang } from './AllSvg';
+import { SprialCircle } from './AllSvg';
 import Intro from './Intro';
 
 const MainContainer = styled.div`
@@ -141,7 +142,13 @@ function Main() {
           <LogoComponent theme={click ? 'dark' : 'light'} />
           <SocialIcons theme={click ? 'dark' : 'light'} />
           <Center click={click}>
-            <YinYang
+            {/* <YinYang
+              onClick={() => handleClick()}
+              width={click ? 120 : 200}
+              height={click ? 120 : 200}
+              fill="currentColor"
+            /> */}
+            <SprialCircle
               onClick={() => handleClick()}
               width={click ? 120 : 200}
               height={click ? 120 : 200}

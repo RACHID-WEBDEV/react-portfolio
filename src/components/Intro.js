@@ -74,16 +74,17 @@ const Intro = () => {
       <SubBox>
         <Text>
           <h1>
-            Hi,{' '}
-            {/* <img
-              width={25}
-              height={25}
+            Hi,
+            <img
+              width={50}
+              height={50}
               src="https://user-images.githubusercontent.com/1303154/88677602-1635ba80-d120-11ea-84d8-d263ba5fc3c0.gif"
               alt="Wave hand"
-            /> */}
+            />
           </h1>
           <h3>I'm Rasheed.</h3>
-          <h6>I design and Code simple yet beautiful websites.</h6>
+          {/* <h6>I design and Code simple yet beautiful websites.</h6> */}
+          <h6>I Develop and Code Multiple Secure Web Applications.</h6>
         </Text>
       </SubBox>
       <SubBox>
