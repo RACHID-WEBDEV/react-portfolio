@@ -26,13 +26,9 @@ const Box = styled.div`
   & > *:nth-child(5) {
     animation-delay: 0.8s;
   }
-
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-    display: flex;
-    cursor: pointer;
-    position: fixed;
-    top: 30%;
-    left: calc(1rem + 2vw);
+  @media (max-width: 40em) {
+    left: 1rem;
+    top: 10rem;
   }
 `;
 
@@ -59,7 +55,7 @@ const Line = styled.span`
 
   @media (max-width: 40em) {
     height: 0.5rem;
-    width: 1px;
+    width: 1.2px;
   }
 `;
 

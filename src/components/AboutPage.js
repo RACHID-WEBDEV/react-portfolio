@@ -8,6 +8,7 @@ import PowerBotton from '../subComponents/PowerBotton';
 import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte';
 import astronaut from '../assets/Images/spaceman.png';
+import SoundBar from '../subComponents/SoundBar';
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
@@ -52,6 +53,23 @@ const Main = styled.div`
   top: 10rem;
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
+  @media (max-width: 40em) {
+    width: 60vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media (max-width: 30em) {
+    width: 50vw;
+    height: auto;
+    backdrop-filter: none;
+    margin-top: 2rem;
+  }
+  @media (max-width: 20em) {
+    padding: 1rem;
+    font-size: calc(0.5rem + 1vw);
+  }
 `;
 
 const AboutPage = () => {
@@ -61,21 +79,12 @@ const AboutPage = () => {
         <LogoComponent theme="dark" />
         <SocialIcons theme="dark" />
         <PowerBotton />
+        <SoundBar />
         <ParticleComponent theme="dark" />
-
+        <BigTitle text="ABOUT" top="10%" left="5%" />
         <Spaceman>
           <img src={astronaut} alt="spaceman" />
         </Spaceman>
-        {/* <Main>
-          I'm a front-end developer located in India. I love to create simple
-          yet beautiful websites with great user experience.
-          <br /> <br />
-          I'm interested in the whole frontend stack Like trying new things and
-          building great projects. I'm an independent freelancer and blogger. I
-          love to write blogs and read books.
-          <br /> <br />I believe everything is an Art when you put your
-          consciousness in it. You can connect with me via social links.
-        </Main> */}
 
         <Main>
           Hello, I am Adeyemo Rasheed, a Software Developer with Experience in
@@ -86,8 +95,6 @@ const AboutPage = () => {
           <br />I have great desire to learn more Always passionate about the
           world of computer science and the algorithmic vision of the world.
         </Main>
-
-        <BigTitle text="ABOUT" top="10%" left="5%" />
       </Box>
     </ThemeProvider>
   );

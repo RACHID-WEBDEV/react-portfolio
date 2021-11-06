@@ -17,6 +17,28 @@ const Box = styled(motion.li)`
   justify-content: space-between;
   border: 1px solid ${props => props.theme.body};
   transition: all 0.2s ease;
+  @media (max-width: 50em) {
+    width: 16rem;
+    margin-right: 6rem;
+    height: 35vh;
+  }
+  @media (max-width: 40em) {
+    width: 14rem;
+    margin-right: 4rem;
+    height: 35vh;
+  }
+  @media (max-width: 25em) {
+    width: 12rem;
+    margin-right: 4rem;
+    height: 35vh;
+    padding: 1.5rem;
+  }
+
+  @media (max-width: 20em) {
+    width: 10rem;
+    margin-right: 4rem;
+    height: 40vh;
+  }
 
   &:hover {
     background-color: ${props => props.theme.body};

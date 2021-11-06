@@ -11,6 +11,7 @@ import { Work } from '../data/WorkData';
 import Card from '../subComponents/Card';
 import { YinYang } from './AllSvg';
 import BigTitlte from '../subComponents/BigTitlte';
+import SoundBar from '../subComponents/SoundBar';
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
@@ -27,8 +28,20 @@ const Main = styled(motion.ul)`
   left: calc(10rem + 15vw);
   height: 40vh;
   display: flex;
-
   color: white;
+  @media (max-width: 50em) {
+    left: calc(8rem + 15vw);
+  }
+  @media (max-width: 40em) {
+    left: calc(2rem + 15vw);
+  }
+  @media (max-width: 25em) {
+    left: calc(1rem + 15vw);
+  }
+  @media (max-width: 40em) {
+    top: 30%;
+    left: calc(6rem + 15vw);
+  }
 `;
 const Rotate = styled.span`
   display: block;
@@ -38,6 +51,22 @@ const Rotate = styled.span`
   width: 80px;
   height: 80px;
   z-index: 1;
+  @media (max-width: 40em) {
+    width: 60px;
+    height: 60px;
+    svg {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  @media (max-width: 25em) {
+    width: 50px;
+    height: 50px;
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
 `;
 
 // Framer-motion Configuration
@@ -77,9 +106,10 @@ const WorkPage = () => {
     <ThemeProvider theme={DarkTheme}>
       <Box>
         <LogoComponent theme="dark" />
-        <SocialIcons theme="dark" />
+        <SocialIcons theme="light" />
         <PowerBotton />
-
+        <SoundBar />
+        <BigTitlte text="WORK" top="10%" right="20%" />
         <Main ref={ref} variants={container} initial="hidden" animate="show">
           {Work.map(d => (
             <Card key={d.id} data={d} />
@@ -88,8 +118,6 @@ const WorkPage = () => {
         <Rotate ref={yinyang}>
           <YinYang width={80} height={80} fill={DarkTheme.text} />
         </Rotate>
-
-        <BigTitlte text="WORK" top="10%" right="20%" />
       </Box>
     </ThemeProvider>
   );

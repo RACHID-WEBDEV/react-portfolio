@@ -8,6 +8,7 @@ import SocialIcons from '../subComponents/SocialIcons';
 import PowerBotton from '../subComponents/PowerBotton';
 import ParticleComponent from '../subComponents/ParticleComponent';
 import BigTitle from '../subComponents/BigTitlte';
+import SoundBar from '../subComponents/SoundBar';
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
@@ -17,6 +18,21 @@ const Box = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  @media (max-width: 50em) {
+    flex-direction: column;
+    padding: 8rem 0px;
+    height: auto;
+  }
+  @media (max-width: 50em) {
+    & > :nth-child(5) {
+      margin-bottom: 5rem;
+    }
+  }
+  @media (max-width: 30em) {
+    & > :nth-child(5) {
+      margin-bottom: 4rem;
+    }
+  }
 `;
 
 const Main = styled.div`
@@ -34,6 +50,14 @@ const Main = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media (max-width: 60em) {
+    height: 55vh;
+  }
+  @media (max-width: 50em) {
+    width: 50vw;
+    height: max-content;
+  }
 
   &:hover {
     color: ${props => props.theme.body};
@@ -80,6 +104,7 @@ const Description = styled.div`
 const MySkillsPage = () => {
   return (
     <ThemeProvider theme={lightTheme}>
+      <SoundBar />
       <Box>
         <LogoComponent theme="light" />
         <SocialIcons theme="light" />
@@ -127,8 +152,7 @@ const MySkillsPage = () => {
             <p>VScode, Github, Codepen etc.</p>
           </Description>
         </Main>
-
-        <BigTitle text="SKILLS" top="80%" right="30%" />
+        <BigTitle text="Skills" top="80%" right="30%" />
       </Box>
     </ThemeProvider>
   );

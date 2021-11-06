@@ -158,11 +158,6 @@ const DarkDiv = styled.div`
     transition: width 0.5s ease 0s, height 1s ease 0.5s;
   }
 `;
-const SocialBox = styled.div`
-  @media (max-width: 40em) {
-    ${props => (props.click ? 'dark' : 'null')};
-  }
-`;
 
 function Main() {
   const [click, setClick] = useState(false);
@@ -177,9 +172,8 @@ function Main() {
           <PowerBotton />
           <LogoComponent theme={click ? 'dark' : 'light'} />
           <SoundBar />
-          <SocialBox>
-            <SocialIcons theme={click ? 'dark' : 'light'} />
-          </SocialBox>
+
+          <SocialIcons theme={click ? 'dark' : 'light'} />
 
           <Center click={click}>
             {/* <YinYang

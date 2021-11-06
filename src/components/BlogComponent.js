@@ -17,7 +17,10 @@ const Box = styled(motion(NavLink))`
   display: flex;
   flex-direction: column;
   z-index: 5;
-
+  @media (max-width: 25em) {
+    width: calc(8rem + 15vw);
+    height: 15rem;
+  }
   &:hover {
     color: ${props => props.theme.body};
     background-color: ${props => props.theme.text};
@@ -44,6 +47,12 @@ const Title = styled.h3`
   font-family: 'Karla', sans-serif;
   font-weight: 700;
   border-bottom: 1px solid ${props => props.theme.text};
+  @media (max-width: 40em) {
+    font-size: calc(0.8em + 1vw);
+  }
+  @media (max-width: 25em) {
+    font-size: calc(0.6em + 1vw);
+  }
 
   ${Box}:hover & {
     border-bottom: 1px solid ${props => props.theme.body};
@@ -54,9 +63,15 @@ const HashTags = styled.div`
 `;
 const Tag = styled.span`
   padding-right: 0.5rem;
+  @media (max-width: 25em) {
+    font-size: calc(0.5em + 1vw);
+  }
 `;
 const Date = styled.span`
   padding: 0.5rem 0;
+  @media (max-width: 25em) {
+    font-size: calc(0.5em + 1vw);
+  }
 `;
 
 const Container = styled(motion.div)``;

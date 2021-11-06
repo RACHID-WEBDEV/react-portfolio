@@ -4,6 +4,9 @@ import { Anchor, Link } from '../components/AllSvg';
 
 const Container = styled.div`
   position: relative;
+  @media (max-width: 40em) {
+    display: none;
+  }
 `;
 const Slider = styled.div`
   position: fixed;
