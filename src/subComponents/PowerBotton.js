@@ -15,7 +15,10 @@ const Power = styled.button`
   border: 1px solid #000;
   width: 2.5rem;
   height: 2.5rem;
-
+  @media (max-width: 30em) {
+    width: 2rem;
+    height: 2rem;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,6 +34,12 @@ const Power = styled.button`
   & > *:first-child {
     text-decoration: none;
     color: inherit;
+  }
+  @media (max-width: 40em) {
+    & > * svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 `;
 

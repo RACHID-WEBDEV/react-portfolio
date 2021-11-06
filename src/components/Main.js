@@ -5,6 +5,7 @@ import PowerBotton from '../subComponents/PowerBotton';
 import LogoComponent from '../subComponents/LogoComponent';
 import SocialIcons from '../subComponents/SocialIcons';
 import { NavLink } from 'react-router-dom';
+
 // import { YinYang } from './AllSvg';
 import { SprialCircle } from './AllSvg';
 import Intro from './Intro';
@@ -39,17 +40,24 @@ const Contact = styled(NavLink)`
   right: calc(1rem + 2vw);
   text-decoration: none;
   z-index: 1;
+  @media only screen and (max-width: 50em) {
+    color: ${props => (props.click ? props.theme.body : props.theme.text)};
+  }
 `;
 const BLOG = styled(NavLink)`
   color: ${props => props.theme.text};
+
   position: absolute;
   top: 50%;
   right: calc(1rem + 2vw);
   transform: rotate(90deg) translate(-50%, -50%);
   text-decoration: none;
   z-index: 1;
+  @media only screen and (max-width: 50em) {
+    color: ${props => (props.click ? props.theme.body : props.theme.text)};
+    text-shadow: ${props => (props.click ? props.theme.textShadow : null)};
+  }
 `;
-
 const WORK = styled(NavLink)`
   color: ${props => (props.click ? props.theme.body : props.theme.text)};
 
@@ -59,7 +67,11 @@ const WORK = styled(NavLink)`
   transform: translate(-50%, -50%) rotate(-90deg);
   text-decoration: none;
   z-index: 1;
+  @media only screen and (max-width: 50em) {
+    text-shadow: ${props => (props.click ? props.theme.textShadow : null)};
+  }
 `;
+
 const BottomBar = styled.div`
   position: absolute;
   bottom: 1rem;
@@ -75,6 +87,9 @@ const ABOUT = styled(NavLink)`
   color: ${props => (props.click ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 1;
+  @media only screen and (max-width: 50em) {
+    color: ${props => props.theme.text};
+  }
 `;
 const SKILLS = styled(NavLink)`
   color: ${props => props.theme.text};
@@ -106,7 +121,16 @@ const Center = styled.button`
   justify-content: center;
   align-items: center;
   transition: all 1s ease;
-
+  @media only screen and (max-width: 50em) {
+    top: ${props => (props.click ? '90%' : '50%')};
+    left: ${props => (props.click ? '90%' : '50%')};
+    width: ${props => (props.click ? '80px' : '150px')};
+    height: ${props => (props.click ? '80px' : '150px')};
+  }
+  @media only screen and (max-width: 30em) {
+    width: ${props => (props.click ? '40px' : '130px')};
+    height: ${props => (props.click ? '40px' : '130px')};
+  }
   & > :first-child {
     animation: ${rotate} infinite 1.5s linear;
   }
@@ -127,6 +151,17 @@ const DarkDiv = styled.div`
   height: ${props => (props.click ? '100%' : '0%')};
   z-index: 1;
   transition: height 0.5s ease, width 1s ease 0.5s;
+  @media (max-width: 50em) {
+    height: ${props => (props.click ? '50%' : '0%')};
+    right: 0px;
+    width: ${props => (props.click ? '100%' : '0%')};
+    transition: width 0.5s ease 0s, height 1s ease 0.5s;
+  }
+`;
+const SocialBox = styled.div`
+  @media (max-width: 40em) {
+    ${props => (props.click ? 'dark' : 'null')};
+  }
 `;
 
 function Main() {
@@ -142,7 +177,10 @@ function Main() {
           <PowerBotton />
           <LogoComponent theme={click ? 'dark' : 'light'} />
           <SoundBar />
-          <SocialIcons theme={click ? 'dark' : 'light'} />
+          <SocialBox>
+            <SocialIcons theme={click ? 'dark' : 'light'} />
+          </SocialBox>
+
           <Center click={click}>
             {/* <YinYang
               onClick={() => handleClick()}
@@ -151,17 +189,19 @@ function Main() {
               fill="currentColor"
             /> */}
             <SprialCircle
+              classname="RotateIcon"
               onClick={() => handleClick()}
-              width={click ? 120 : 200}
-              height={click ? 120 : 200}
+              width={click ? 80 : 150}
+              height={click ? 80 : 150}
               fill="currentColor"
             />
-            <span>Click Here</span>
+            <span onClick={() => handleClick()}>Click Here</span>
           </Center>
 
           <Contact
             target="_blank"
             to={{ pathname: 'mailto:rasheedolamide2015@gmail.com' }}
+            click={click}
           >
             <motion.h2
               initial={{
@@ -178,7 +218,7 @@ function Main() {
               Say Hi...✌
             </motion.h2>
           </Contact>
-          <BLOG to="/blog">
+          <BLOG to="/blog" click={click}>
             <motion.h2
               initial={{
                 y: -200,
