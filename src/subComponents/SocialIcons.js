@@ -1,194 +1,137 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
-import Media from 'react-media';
-import { Facebook, Github, Twitter, YouTube } from '../components/AllSvg';
-import { DarkTheme } from '../components/Themes';
+import { Github, Twitter, Facebook, YouTube } from "../components/AllSvg";
+
+import styled from "styled-components";
+import { motion } from "framer-motion";
+
+import { NavLink } from "react-router-dom";
+import { DarkTheme, mediaQueries } from "../components/Themes";
 
 const Icons = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
   position: fixed;
   bottom: 0;
   left: 2rem;
-  z-index: 3;
 
-  @media (max-width: 40em) {
-    left: 1rem;
-     svg {
-        width: 20px;
-        height: 20px;
-            
-      }
-    
-  }
+  z-index: 3;
 
   & > *:not(:last-child) {
     margin: 0.5rem 0;
-    @media (max-width: 20em){
-        margin: 0.3rem 0px;
-    }
-    
-    
+
+    ${mediaQueries(20)`
+      margin: 0.3rem 0;
+
+
+  `};
+  }
+
+  ${mediaQueries(40)`
+  left: 1rem;
+
+      svg{
+        width:20px;
+        height:20px
+      }
+
+  `};
 `;
 const Line = styled(motion.span)`
   width: 2px;
-  height: 5rem;
-  background-color: ${props =>
-    props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
-  @media (max-width: 50em) {
-    background-color: ${props =>
-      props.color === 'light' ? DarkTheme.body : DarkTheme.body};
-  }
+  height: 8rem;
+  background-color: ${(props) =>
+    props.color === "dark" ? DarkTheme.text : DarkTheme.body};
 `;
+const SocialIcons = (props) => {
+  const mq = window.matchMedia("(max-width: 40em)").matches;
 
-const SocialIcons = props => {
   return (
     <Icons>
       <motion.div
-        initial={{ transform: 'scale(0)' }}
+        initial={{ transform: "scale(0)" }}
         animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: 'spring', duration: 1, delay: 1 }}
+        transition={{ type: "spring", duration: 1, delay: 1 }}
       >
         <NavLink
-          style={{ color: 'inherit' }}
+          style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: 'https://github.com/rachid-webdev' }}
+          to={{ pathname: "https://github.com/codebucks27" }}
         >
-          <Media queries={{ small: { maxWidth: 768 } }}>
-            {matches =>
-              matches.small ? (
-                <Github
-                  width={20}
-                  height={20}
-                  fill={
-                    props.theme === 'dark' ? DarkTheme.body : DarkTheme.body
-                  }
-                />
-              ) : (
-                <Github
-                  width={25}
-                  height={25}
-                  fill={
-                    props.theme === 'dark' ? DarkTheme.text : DarkTheme.body
-                  }
-                />
-              )
+          <Github
+            width={25}
+            height={25}
+            fill={
+              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
             }
-          </Media>
+          />
         </NavLink>
       </motion.div>
       <motion.div
-        initial={{ transform: 'scale(0)' }}
+        initial={{ transform: "scale(0)" }}
         animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: 'spring', duration: 1, delay: 1.2 }}
+        transition={{ type: "spring", duration: 1, delay: 1.2 }}
       >
         <NavLink
-          style={{ color: 'inherit' }}
+          style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: 'https://twiter.com/horlameday110' }}
+          to={{ pathname: "https://twitter.com/code_bucks" }}
         >
-          <Media queries={{ small: { maxWidth: 768 } }}>
-            {matches =>
-              matches.small ? (
-                <Twitter
-                  width={20}
-                  height={20}
-                  fill={
-                    props.theme === 'dark' ? DarkTheme.body : DarkTheme.body
-                  }
-                />
-              ) : (
-                <Twitter
-                  width={25}
-                  height={25}
-                  fill={
-                    props.theme === 'dark' ? DarkTheme.text : DarkTheme.body
-                  }
-                />
-              )
+          <Twitter
+            width={25}
+            height={25}
+            fill={
+              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
             }
-          </Media>
+          />
         </NavLink>
       </motion.div>
       <motion.div
-        initial={{ transform: 'scale(0)' }}
+        initial={{ transform: "scale(0)" }}
         animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: 'spring', duration: 1, delay: 1.4 }}
+        transition={{ type: "spring", duration: 1, delay: 1.4 }}
       >
         <NavLink
-          style={{ color: 'inherit' }}
+          style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: 'https://facbook.com/olamiderasheed' }}
+          to={{ pathname: "https://www.facebook.com/codebucks27" }}
         >
-          <Media queries={{ small: { maxWidth: 768 } }}>
-            {matches =>
-              matches.small ? (
-                <Facebook
-                  width={20}
-                  height={20}
-                  fill={
-                    props.theme === 'dark' ? DarkTheme.body : DarkTheme.body
-                  }
-                />
-              ) : (
-                <Facebook
-                  width={25}
-                  height={25}
-                  fill={
-                    props.theme === 'dark' ? DarkTheme.text : DarkTheme.body
-                  }
-                />
-              )
+          <Facebook
+            width={25}
+            height={25}
+            fill={
+              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
             }
-          </Media>
+          />
         </NavLink>
       </motion.div>
       <motion.div
-        initial={{ transform: 'scale(0)' }}
+        initial={{ transform: "scale(0)" }}
         animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: 'spring', duration: 1, delay: 1.6 }}
+        transition={{ type: "spring", duration: 1, delay: 1.6 }}
       >
         <NavLink
-          style={{ color: 'inherit' }}
+          style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: 'https://github.com/rachid-webdev' }}
+          to={{
+            pathname:
+              "https://www.youtube.com/channel/UCeYt6blRBKuNrEg_-282fSA",
+          }}
         >
-          <Media queries={{ small: { maxWidth: 768 } }}>
-            {matches =>
-              matches.small ? (
-                <YouTube
-                  width={20}
-                  height={20}
-                  fill={
-                    props.theme === 'dark' ? DarkTheme.body : DarkTheme.body
-                  }
-                />
-              ) : (
-                <YouTube
-                  width={25}
-                  height={25}
-                  fill={
-                    props.theme === 'dark' ? DarkTheme.text : DarkTheme.body
-                  }
-                />
-              )
+          <YouTube
+            width={25}
+            height={25}
+            fill={
+              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
             }
-          </Media>
+          />
         </NavLink>
       </motion.div>
+
       <Line
+        initial={{ height: 0 }}
+        animate={{ height: mq ? "5rem" : "8rem" }}
         color={props.theme}
-        initial={{
-          height: 0,
-        }}
-        animate={{
-          height: '5rem',
-        }}
-        transition={{ type: 'spring', duration: 1, delay: 0.8 }}
+        transition={{ type: "spring", duration: 1, delay: 0.8 }}
       />
     </Icons>
   );

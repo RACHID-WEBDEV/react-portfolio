@@ -4,7 +4,6 @@ export const lightTheme = {
   fontFamily: "'Source Sans Pro', sans-serif",
   bodyRgba: '252, 246, 244',
   textRgba: '0,0,0',
-  textShadow: 'rgb(0 0 0) 0px 0px 4px',
 };
 
 export const DarkTheme = {
@@ -13,5 +12,17 @@ export const DarkTheme = {
   fontFamily: "'Source Sans Pro', sans-serif",
   textRgba: '252, 246, 244',
   bodyRgba: '0,0,0',
-  textShadow: 'rgb(0 0 0) 0px 0px 4px',
+};
+
+// You can also use these breakpoints after importing it and use it as breakpoints.sm
+export const breakpoints = {
+  sm: 20, //em
+  md: 30,
+  lg: 45,
+  xl: 60,
+  xxl: 75,
+};
+
+export const mediaQueries = key => {
+  return style => `@media (max-width: ${key}em) { ${style} }`;
 };

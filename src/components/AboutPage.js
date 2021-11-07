@@ -1,42 +1,51 @@
-import React from 'react';
-import styled, { keyframes, ThemeProvider } from 'styled-components';
-import { DarkTheme } from './Themes';
+import React, { lazy, Suspense } from 'react';
 
-import LogoComponent from '../subComponents/LogoComponent';
-import SocialIcons from '../subComponents/SocialIcons';
-import PowerBotton from '../subComponents/PowerBotton';
-import ParticleComponent from '../subComponents/ParticleComponent';
-import BigTitle from '../subComponents/BigTitlte';
-import astronaut from '../assets/Images/spaceman.png';
+import { motion } from 'framer-motion'
 import SoundBar from '../subComponents/SoundBar';
 
-const Box = styled.div`
-  background-color: ${props => props.theme.body};
+import styled, { keyframes, ThemeProvider } from 'styled-components'
+
+import { DarkTheme, mediaQueries } from './Themes'
+import astronaut from "../assets/Images/spaceman.png";
+import Loading from '../subComponents/Loading';
+//Components
+const SocialIcons = lazy(() => import('../subComponents/SocialIcons'))
+const PowerBotton = lazy(() => import('../subComponents/PowerBotton'))
+const LogoComponent = lazy(() => import('../subComponents/LogoComponent'))
+const ParticlesComponent = lazy(() =>
+  import('../subComponents/ParticleComponent')
+)
+const BigTitle = lazy(() => import('../subComponents/BigTitle'))
+
+
+const Box = styled(motion.div)`
+  background-color: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
-`;
-const float = keyframes`
-0% { transform: translateY(-10px) }
-50% { transform: translateY(15px) translateX(15px) }
-100% { transform: translateY(-10px) }
+`
 
-`;
-const Spaceman = styled.div`
+const float = keyframes`
+0% { transform: translateY(-10px)         }
+    50% { transform: translateY(15px) translateX(15px)        }
+    100% { transform: translateY(-10px)         }
+`
+
+const SpaceMan = styled(motion.div)`
   position: absolute;
   top: 10%;
   right: 5%;
-  width: 20vw;
   animation: ${float} 4s ease infinite;
-  img {
-    width: 100%;
-    height: auto;
+width:20vw;
+  img{
+    width:100%;
+    height:auto;
   }
-`;
-const Main = styled.div`
-  border: 2px solid ${props => props.theme.text};
-  color: ${props => props.theme.text};
+`
+const Main = styled(motion.div)`
+  border: 2px solid ${(props) => props.theme.text};
+  color: ${(props) => props.theme.text};
   padding: 2rem;
   width: 50vw;
   height: 60vh;
@@ -46,58 +55,79 @@ const Main = styled.div`
   justify-content: center;
   align-items: center;
   font-size: calc(0.6rem + 1vw);
-  backdrop-filter: blur(4px);
-
+ backdrop-filter: blur(4px);
+  
   position: absolute;
   left: calc(5rem + 5vw);
   top: 10rem;
+
   font-family: 'Ubuntu Mono', monospace;
   font-style: italic;
-  @media (max-width: 40em) {
-    width: 60vw;
-    height: 50vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  @media (max-width: 30em) {
-    width: 50vw;
-    height: auto;
-    backdrop-filter: none;
-    margin-top: 2rem;
-  }
-  @media (max-width: 20em) {
-    padding: 1rem;
-    font-size: calc(0.5rem + 1vw);
-  }
-`;
 
+  ${mediaQueries(40)`
+          width: 60vw;
+          height: 50vh;
+          top:50%;
+          left:50%;
+          transform:translate(-50%,-50%);
+
+
+  `};
+  ${mediaQueries(30)`
+          width: 50vw;
+          height: auto;
+          backdrop-filter: none;
+          margin-top:2rem;
+
+  `};
+
+${mediaQueries(20)`
+          padding: 1rem;
+          font-size: calc(0.5rem + 1vw);
+  `};
+
+`
 const AboutPage = () => {
   return (
     <ThemeProvider theme={DarkTheme}>
-      <Box>
-        <LogoComponent theme="dark" />
-        <SocialIcons theme="dark" />
-        <PowerBotton />
-        <SoundBar />
-        <ParticleComponent theme="dark" />
-        <BigTitle text="ABOUT" top="10%" left="5%" />
-        <Spaceman>
-          <img src={astronaut} alt="spaceman" />
-        </Spaceman>
+      <Suspense fallback={<Loading/>}>
+        <SoundBar/>
+        <Box
+          key='skills'
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 0.5 } }}
+          exit={{ opacity: 0, transition: { duration: 0.5 } }}>
+          <LogoComponent theme='dark' />
+          <PowerBotton />
+          <SocialIcons theme='dark' />
+          <ParticlesComponent theme='dark' />
 
-        <Main>
-          Hello, I am Adeyemo Rasheed, a Software Developer with Experience in
-          Building Multiple Secure Web Applications. over the years I have
-          achieved numerous training courses and a coding bootcamps combine with
-          my creativity and personal attitudes to the Information Technologies.
-          <br />
-          <br />I have great desire to learn more Always passionate about the
-          world of computer science and the algorithmic vision of the world.
-        </Main>
-      </Box>
+          <SpaceMan
+            initial={{ right: '-20%', top: '100%' }}
+            animate={{
+              right: '5%',
+              top: '10%',
+              transition: { duration: 2, delay: 0.5 },
+            }}>
+              <img src={astronaut}  alt="spaceman" />
+          </SpaceMan>
+             <Main
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}>
+            Hello, I am Adeyemo Rasheed, a Software Developer with Experience in
+                Building Multiple Secure Web Applications. over the years I have
+                achieved numerous training courses and a coding bootcamps combine with
+                my creativity and personal attitudes to the Information Technologies.
+                <br />
+                <br />I have great desire to learn more Always passionate about the
+                world of computer science and the algorithmic vision of the world.
+          </Main>
+          <BigTitle text='ABOUT' top='10%' left='5%' />
+        </Box>
+      </Suspense>
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage
+
