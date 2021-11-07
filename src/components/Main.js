@@ -4,7 +4,7 @@ import { lazy, Suspense, useState } from 'react';
 import { motion } from 'framer-motion';
 
 //Components
-import { SprialCircle } from './AllSvg';
+import { Drone } from './AllSvg';
 import Intro from './Intro';
 import Loading from '../subComponents/Loading';
 import { mediaQueries } from './Themes';
@@ -231,14 +231,14 @@ const Main = () => {
           )}
           <Center click={click}>
             {mq ? (
-              <SprialCircle
+              <Drone
                 onClick={() => handleClick()}
                 width={click ? 80 : 150}
                 height={click ? 80 : 150}
                 fill="currentColor"
               />
             ) : (
-              <SprialCircle
+              <Drone
                 onClick={() => handleClick()}
                 width={click ? 120 : 200}
                 height={click ? 120 : 200}

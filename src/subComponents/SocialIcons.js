@@ -1,10 +1,10 @@
-import { Github, Twitter, Facebook, YouTube } from "../components/AllSvg";
+import { Github, Twitter, Facebook, Whatsapp } from '../components/AllSvg';
 
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-import { NavLink } from "react-router-dom";
-import { DarkTheme, mediaQueries } from "../components/Themes";
+import { NavLink } from 'react-router-dom';
+import { DarkTheme, mediaQueries } from '../components/Themes';
 
 const Icons = styled.div`
   display: flex;
@@ -39,89 +39,88 @@ const Icons = styled.div`
 const Line = styled(motion.span)`
   width: 2px;
   height: 8rem;
-  background-color: ${(props) =>
-    props.color === "dark" ? DarkTheme.text : DarkTheme.body};
+  background-color: ${props =>
+    props.color === 'dark' ? DarkTheme.text : DarkTheme.body};
 `;
-const SocialIcons = (props) => {
-  const mq = window.matchMedia("(max-width: 40em)").matches;
+const SocialIcons = props => {
+  const mq = window.matchMedia('(max-width: 40em)').matches;
 
   return (
     <Icons>
       <motion.div
-        initial={{ transform: "scale(0)" }}
+        initial={{ transform: 'scale(0)' }}
         animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1 }}
+        transition={{ type: 'spring', duration: 1, delay: 1 }}
       >
         <NavLink
-          style={{ color: "inherit" }}
+          style={{ color: 'inherit' }}
           target="_blank"
-          to={{ pathname: "https://github.com/codebucks27" }}
+          to={{ pathname: 'https://github.com/RACHID-WEBDEV' }}
         >
           <Github
             width={25}
             height={25}
             fill={
-              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
+              props.theme === 'dark' ? `${DarkTheme.text}` : `${DarkTheme.body}`
             }
           />
         </NavLink>
       </motion.div>
       <motion.div
-        initial={{ transform: "scale(0)" }}
+        initial={{ transform: 'scale(0)' }}
         animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.2 }}
+        transition={{ type: 'spring', duration: 1, delay: 1.2 }}
       >
         <NavLink
-          style={{ color: "inherit" }}
+          style={{ color: 'inherit' }}
           target="_blank"
-          to={{ pathname: "https://twitter.com/code_bucks" }}
+          to={{ pathname: 'https://twitter.com/Holarmeday1' }}
         >
           <Twitter
             width={25}
             height={25}
             fill={
-              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
+              props.theme === 'dark' ? `${DarkTheme.text}` : `${DarkTheme.body}`
             }
           />
         </NavLink>
       </motion.div>
       <motion.div
-        initial={{ transform: "scale(0)" }}
+        initial={{ transform: 'scale(0)' }}
         animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.4 }}
+        transition={{ type: 'spring', duration: 1, delay: 1.4 }}
       >
         <NavLink
-          style={{ color: "inherit" }}
+          style={{ color: 'inherit' }}
           target="_blank"
-          to={{ pathname: "https://www.facebook.com/codebucks27" }}
+          to={{ pathname: 'https://web.facebook.com/olamiderasheed/' }}
         >
           <Facebook
             width={25}
             height={25}
             fill={
-              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
+              props.theme === 'dark' ? `${DarkTheme.text}` : `${DarkTheme.body}`
             }
           />
         </NavLink>
       </motion.div>
       <motion.div
-        initial={{ transform: "scale(0)" }}
+        initial={{ transform: 'scale(0)' }}
         animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.6 }}
+        transition={{ type: 'spring', duration: 1, delay: 1.6 }}
       >
         <NavLink
-          style={{ color: "inherit" }}
+          style={{ color: 'inherit' }}
           target="_blank"
           to={{
-            pathname:
-              "https://www.youtube.com/channel/UCeYt6blRBKuNrEg_-282fSA",
+            pathname: 'https://wa.me/+2347064245842',
           }}
         >
-          <YouTube
+          <Whatsapp
             width={25}
             height={25}
             fill={
-              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
+              props.theme === 'dark' ? `${DarkTheme.text}` : `${DarkTheme.body}`
             }
           />
         </NavLink>
@@ -129,9 +128,9 @@ const SocialIcons = (props) => {
 
       <Line
         initial={{ height: 0 }}
-        animate={{ height: mq ? "5rem" : "8rem" }}
+        animate={{ height: mq ? '5rem' : '8rem' }}
         color={props.theme}
-        transition={{ type: "spring", duration: 1, delay: 0.8 }}
+        transition={{ type: 'spring', duration: 1, delay: 0.8 }}
       />
     </Icons>
   );
