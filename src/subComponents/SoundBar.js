@@ -2,15 +2,14 @@ import React, { useRef, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 import music from '../assets/audio/cooltemper.mp3';
-import { mediaQueries } from "../components/Themes";
-
+import { mediaQueries } from '../components/Themes';
 
 const Box = styled.div`
   display: flex;
   cursor: pointer;
 
   position: fixed;
-  left: 8rem;
+  left: 10rem;
   top: 3rem;
   z-index: 10;
 
@@ -49,11 +48,11 @@ const play = keyframes`
 }
 `;
 const Line = styled.span`
-  background: ${(props) => props.theme.text};
-  border: 1px solid ${(props) => props.theme.body};
+  background: ${props => props.theme.text};
+  border: 1px solid ${props => props.theme.body};
 
   animation: ${play} 1s ease infinite;
-  animation-play-state: ${(props) => (props.click ? "running" : "paused")};
+  animation-play-state: ${props => (props.click ? 'running' : 'paused')};
   height: 1rem;
   width: 2px;
   margin: 0 0.1rem;

@@ -221,7 +221,10 @@ const Intro = () => {
             />
           </h1>
           <h2>I'm Rasheed.</h2>
-          <h6>I Develop and Code Multiple Secure Web Applications.</h6>
+          <h6>
+            I design and code beautifully Web and Mobile Applications, and I
+            love what I do.{' '}
+          </h6>
         </Text>
       </SubBox>
       <SubBox>

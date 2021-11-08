@@ -17,9 +17,10 @@ const Logo = styled.h1`
     top: 2 rem;
   }
 `;
+const text = `${'<R/>'}`;
 
 const LogoComponent = props => {
-  return <Logo color={props.theme}>RC</Logo>;
+  return <Logo color={props.theme}>{text}</Logo>;
 };
 
 export default LogoComponent;
