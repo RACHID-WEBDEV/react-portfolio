@@ -134,7 +134,7 @@ const BLOG = styled(NavLink)`
 
   text-decoration: none;
   @media only screen and (max-width: 50em) {
-    text-shadow: ${props => (props.click ? '0 0 4px #000' : 'none')};
+    text-shadow: ${props => (props.click ? '0 0 4px #040C18' : 'none')};
   }
 `;
 const WORK = styled(NavLink)`
@@ -146,7 +146,7 @@ const WORK = styled(NavLink)`
   z-index: 1;
   text-decoration: none;
   @media only screen and (max-width: 50em) {
-    text-shadow: ${props => (props.click ? '0 0 4px #000' : 'none')};
+    text-shadow: ${props => (props.click ? '0 0 4px #040C18' : 'none')};
   }
 `;
 const BottomBar = styled.div`
@@ -175,7 +175,7 @@ const DarkDiv = styled.div`
   bottom: 0;
   right: 50%;
   width: ${props => (props.click ? '50%' : '0%')};
-  background-color: #000000;
+  background-color: #040c18;
   height: ${props => (props.click ? '100%' : '0%')};
   transition: height 0.5s ease, width 1s ease 0.5s;
   z-index: 1;
@@ -235,14 +235,14 @@ const Main = () => {
                 onClick={() => handleClick()}
                 width={click ? 80 : 150}
                 height={click ? 80 : 150}
-                fill="currentColor"
+                fill="#040c18"
               />
             ) : (
               <Drone
                 onClick={() => handleClick()}
                 width={click ? 120 : 200}
                 height={click ? 120 : 200}
-                fill="currentColor"
+                fill="#040c18"
               />
             )}
 

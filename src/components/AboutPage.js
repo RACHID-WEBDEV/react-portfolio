@@ -96,6 +96,7 @@ const BottomBar = styled.div`
 
   display: flex;
   justify-content: space-evenly;
+  
 `;
 
 const RESUME = styled(NavLink)`
