@@ -7,6 +7,7 @@ import styled, { keyframes, ThemeProvider } from 'styled-components';
 
 import { DarkTheme, mediaQueries } from './Themes';
 import astronaut from '../assets/Images/spaceman.png';
+import pdficon from '../assets/Images/download-Icon.png';
 import Loading from '../subComponents/Loading';
 import { NavLink } from 'react-router-dom';
 //Components
@@ -96,7 +97,6 @@ const BottomBar = styled.div`
 
   display: flex;
   justify-content: space-evenly;
-  
 `;
 
 const RESUME = styled(NavLink)`
@@ -167,6 +167,13 @@ const AboutPage = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
+                <img
+                  src={pdficon}
+                  height="auto"
+                  width="15%"
+                  style={{ marginRight: '3px' }}
+                  alt="pdf Icon"
+                />
                 Download CV
               </motion.h2>
             </RESUME>
