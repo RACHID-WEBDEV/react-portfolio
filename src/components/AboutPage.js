@@ -103,6 +103,9 @@ const RESUME = styled(NavLink)`
   color: ${props => (props.click ? props.theme.body : props.theme.text)};
   text-decoration: none;
   z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const AboutPage = () => {
   const [click, setClick] = useState(false);
@@ -170,7 +173,7 @@ const AboutPage = () => {
                 <img
                   src={pdficon}
                   height="auto"
-                  width="15%"
+                  width="13%"
                   style={{ marginRight: '3px' }}
                   alt="pdf Icon"
                 />

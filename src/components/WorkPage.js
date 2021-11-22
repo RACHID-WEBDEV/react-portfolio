@@ -1,22 +1,22 @@
-import { motion } from "framer-motion";
-import { useEffect, useRef, lazy, Suspense } from "react";
+import { motion } from 'framer-motion';
+import { useEffect, useRef, lazy, Suspense } from 'react';
 
-import styled, { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from 'styled-components';
 
-import { YinYang } from "./AllSvg";
-import { Work } from "../data/WorkData";
-import { DarkTheme, mediaQueries } from "./Themes";
+import { YinYang } from './AllSvg';
+import { Work } from '../data/WorkData';
+import { DarkTheme, mediaQueries } from './Themes';
 
-import Card from "../subComponents/Card";
-import Loading from "../subComponents/Loading";
+import Card from '../subComponents/Card';
+import Loading from '../subComponents/Loading';
 
-const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
-const PowerBotton = lazy(() => import("../subComponents/PowerBotton"));
-const LogoComponent = lazy(() => import("../subComponents/LogoComponent"));
-const BigTitle = lazy(() => import("../subComponents/BigTitle"));
+const SocialIcons = lazy(() => import('../subComponents/SocialIcons'));
+const PowerBotton = lazy(() => import('../subComponents/PowerBotton'));
+const LogoComponent = lazy(() => import('../subComponents/LogoComponent'));
+const BigTitle = lazy(() => import('../subComponents/BigTitle'));
 
 const Box = styled(motion.div)`
-  background-color: ${(props) => props.theme.body};
+  background-color: ${props => props.theme.body};
   position: relative;
   display: flex;
   height: 400vh;
@@ -24,7 +24,7 @@ const Box = styled(motion.div)`
 
 const Main = styled(motion.ul)`
   position: fixed;
-  top: 12rem;
+  top: 10rem;
   left: calc(10rem + 15vw);
 
   height: 40vh;
@@ -111,12 +111,12 @@ const WorkPage = () => {
       element.style.transform = `translateX(${-window.pageYOffset}px)`;
 
       return (yinyang.current.style.transform =
-        "rotate(" + -window.pageYOffset + "deg)");
+        'rotate(' + -window.pageYOffset + 'deg)');
     };
 
-    window.addEventListener("scroll", rotate);
+    window.addEventListener('scroll', rotate);
     return () => {
-      window.removeEventListener("scroll", rotate);
+      window.removeEventListener('scroll', rotate);
     };
   }, []);
 
@@ -134,12 +134,12 @@ const WorkPage = () => {
           <SocialIcons theme="dark" />
 
           <Main ref={ref} variants={container} initial="hidden" animate="show">
-            {Work.map((d) => (
+            {Work.map(d => (
               <Card key={d.id} data={d} />
             ))}
           </Main>
 
-          <BigTitle text="WORK" top="10%" right="20%" />
+          <BigTitle text="RECENT" top="6%" right="10%" />
 
           <Rotate ref={yinyang}>
             <YinYang width={80} height={80} fill={DarkTheme.text} />
