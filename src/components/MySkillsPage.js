@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import { lazy, Suspense } from 'react';
 import { lightTheme, mediaQueries } from './Themes';
 
-import { Design, Develope } from './AllSvg';
+import { Database, Develope } from './AllSvg';
 import SoundBar from '../subComponents/SoundBar';
 import Loading from '../subComponents/Loading';
 
@@ -166,11 +166,31 @@ const MySkillsPage = () => {
 
           <Main>
             <Title>
-              <Design width={40} height={40} /> Designer
+              <Develope width={40} height={40} /> Frontend Developer
             </Title>
             <Description>
-              I love to create design which speaks, Keep it clean, minimal and
-              simple.
+              I combine technical and creative expertise with experience to
+              bring simply outstanding web development services
+            </Description>
+            <Description>
+              <strong>Skills</strong> <br />
+              <p>
+                Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase
+                etc.
+              </p>
+            </Description>
+            <Description>
+              <strong>Tools</strong> <br />
+              <p>VScode, Github, Codepen etc.</p>
+            </Description>
+          </Main>
+          <Main>
+            <Title>
+              <Database width={40} height={40} /> Backend Developer
+            </Title>
+            <Description>
+              I create your custom software from the ground up, exactly as you
+              envisioned it
             </Description>
             <Description>
               <strong>I like to Design</strong> <br />
@@ -184,26 +204,6 @@ const MySkillsPage = () => {
               <ul>
                 <li>Figma</li>
               </ul>
-            </Description>
-          </Main>
-          <Main>
-            <Title>
-              <Develope width={40} height={40} /> Frontend Developer
-            </Title>
-            <Description>
-              I value business or brand for which i'm creating, thus i enjoy
-              bringing new ideas to life.
-            </Description>
-            <Description>
-              <strong>Skills</strong> <br />
-              <p>
-                Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase
-                etc.
-              </p>
-            </Description>
-            <Description>
-              <strong>Tools</strong> <br />
-              <p>VScode, Github, Codepen etc.</p>
             </Description>
           </Main>
           <BigTitle text="Skills" top="80%" right="30%" />

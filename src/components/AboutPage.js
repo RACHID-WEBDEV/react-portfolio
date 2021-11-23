@@ -155,7 +155,7 @@ const AboutPage = () => {
               target="_blank"
               to={{
                 pathname:
-                  'https://drive.google.com/file/d/1RgNb-YWlzUf7qP6F-Jkf_-fVweq0saZb/view?usp=sharing',
+                  'https://drive.google.com/file/d/1RsN8vm8EKe3nMZMByc9_dJcSKCPRYDLO/view?usp=sharing',
               }}
             >
               <motion.h2
