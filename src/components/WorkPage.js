@@ -139,7 +139,7 @@ const WorkPage = () => {
             ))}
           </Main>
 
-          <BigTitle text="WORK" top="8%" right="5%" />
+          <BigTitle text="Recent" top="8%" right="5%" />
 
           <Rotate ref={yinyang}>
             <YinYang width={80} height={80} fill={DarkTheme.text} />
