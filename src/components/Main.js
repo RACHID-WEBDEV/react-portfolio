@@ -269,7 +269,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-               Say Hi..✉
+                Say Hi..✉
               </motion.h3>
             </Contact>
           ) : (
@@ -296,7 +296,7 @@ const Main = () => {
           )}
 
           {mq ? (
-            <BLOG click={+click} onClick={() => setpath('blog')} to="/blog">
+            <BLOG click={+click} onClick={() => setpath('blog')} to="/projects">
               <motion.h2
                 initial={{
                   y: -200,
@@ -313,7 +313,7 @@ const Main = () => {
               </motion.h2>
             </BLOG>
           ) : (
-            <BLOG click={+false} onClick={() => setpath('blog')} to="/blog">
+            <BLOG click={+false} onClick={() => setpath('blog')} to="/projects">
               <motion.h2
                 initial={{
                   y: -200,
@@ -326,7 +326,7 @@ const Main = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
               >
-                Prjt
+                PrJt
               </motion.h2>
             </BLOG>
           )}

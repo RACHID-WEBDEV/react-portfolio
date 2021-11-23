@@ -55,7 +55,7 @@ const SocialIcons = props => {
         <NavLink
           style={{ color: 'inherit' }}
           target="_blank"
-          to={{ pathname: 'https://github.com/RACHID-WEBDEV' }}
+          to={{ pathname: 'https://bit.ly/3FXSVZp' }}
         >
           <Github
             width={25}
@@ -74,7 +74,7 @@ const SocialIcons = props => {
         <NavLink
           style={{ color: 'inherit' }}
           target="_blank"
-          to={{ pathname: 'https://twitter.com/Holarmeday1' }}
+          to={{ pathname: 'https://bit.ly/3CGQ5pj' }}
         >
           <Twitter
             width={25}
@@ -93,7 +93,7 @@ const SocialIcons = props => {
         <NavLink
           style={{ color: 'inherit' }}
           target="_blank"
-          to={{ pathname: 'https://web.facebook.com/olamiderasheed/' }}
+          to={{ pathname: 'https://bit.ly/2ZfFKTG' }}
         >
           <Facebook
             width={25}
@@ -113,7 +113,7 @@ const SocialIcons = props => {
           style={{ color: 'inherit' }}
           target="_blank"
           to={{
-            pathname: 'https://wa.me/+2347064245842',
+            pathname: 'https://bit.ly/3FFYHyl',
           }}
         >
           <Whatsapp
