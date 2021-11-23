@@ -6,7 +6,7 @@ import { mediaQueries } from '../components/Themes';
 
 const Box = styled(motion.li)`
   width: 16rem;
-  height: 42vh;
+  height: 40vh;
   background-color: ${props => props.theme.text};
   color: ${props => props.theme.body};
   padding: 1.5rem 2rem;

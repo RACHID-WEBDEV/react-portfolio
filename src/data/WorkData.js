@@ -21,7 +21,7 @@ export const Work = [
   },
   {
     id: 3,
-    name: 'Meira Consult Edu Consultant',
+    name: 'Meira Edu Consultant',
     description:
       'Professional Educational Consultant, Study Abroad | Visa Consultant Agency.',
     tags: ['Wordpress', 'Custom Css', 'Bold Builder'],
