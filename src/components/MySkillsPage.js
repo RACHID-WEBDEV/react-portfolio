@@ -170,13 +170,13 @@ const MySkillsPage = () => {
             </Title>
             <Description>
               I combine technical and creative expertise with experience to
-              bring simply outstanding web development services
+              bring simply outstanding web development
             </Description>
             <Description>
               <strong>Skills</strong> <br />
               <p>
-                Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase
-                etc.
+                Html, Css, Js, React, NextJs, Sass, Bootstrap, Tailwind,
+                Firebase etc.
               </p>
             </Description>
             <Description>
@@ -189,20 +189,21 @@ const MySkillsPage = () => {
               <Database width={40} height={40} /> Backend Developer
             </Title>
             <Description>
-              I create your custom software from the ground up, exactly as you
-              envisioned it
+              I create custom Software / web apps using and most modern
+              web-oriented technologies.
             </Description>
+
             <Description>
-              <strong>I like to Design</strong> <br />
+              <strong>I Work With</strong> <br />
               <ul>
-                <li>Web Design</li>
-                <li>Mobile Apps</li>
+                <li>LARAVEL</li>
+                <li>Nodejs</li>
               </ul>
             </Description>
             <Description>
               <strong>Tools</strong> <br />
               <ul>
-                <li>Figma</li>
+                <li>Postman, XAMPP, MySql, MongoDBCompass, nodemon etc</li>
               </ul>
             </Description>
           </Main>
