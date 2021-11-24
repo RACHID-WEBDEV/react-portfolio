@@ -13,7 +13,7 @@ const Box = styled(motion(NavLink))`
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  border-radius: 8px;
+  border-radius: 5px;
 
   display: flex;
   flex-direction: column;
@@ -60,6 +60,8 @@ const Title = styled.h3`
   }
 `;
 const HashTags = styled.div`
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   padding: 0.5rem 0;
 `;
 const Tag = styled.span`

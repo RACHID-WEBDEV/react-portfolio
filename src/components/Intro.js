@@ -222,8 +222,8 @@ const Intro = () => {
           </h1>
           <h2>I'm Rasheed.</h2>
           <h6>
-            I design and code Web and Mobile Apps using the most modern
-            web-oriented tech.
+            I Design and Code Web and Mobile Apps Using the Most Modern Web
+            Technologies.
           </h6>
         </Text>
       </SubBox>

@@ -106,6 +106,7 @@ const RESUME = styled(NavLink)`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 `;
 const AboutPage = () => {
   const [click, setClick] = useState(false);
@@ -142,10 +143,10 @@ const AboutPage = () => {
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
           >
             Hello, I am Adeyemo Rasheed, a Software Developer with Experience in
-            Building Multiple Secure Web Applications. over the years I have
-            achieved numerous training courses and a coding bootcamps combine
-            with my creativity and personal attitudes to the Information
-            Technologies.
+            Building Multiple Secure Web Applications. Over the years My Life
+            Involves Blending the Art of Design with Programming Skills to
+            Deliver an Immersive and Engaging User Experience through Efficient
+            Web Development
             <br />
             <br />I have great desire to learn more Always passionate about the
             world of computer science and the algorithmic vision of the world.
@@ -177,7 +178,7 @@ const AboutPage = () => {
                   style={{ marginRight: '3px' }}
                   alt="pdf Icon"
                 />
-                Download CV
+                DOWNLOAD CV
               </motion.h2>
             </RESUME>
           </BottomBar>

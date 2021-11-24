@@ -16,7 +16,7 @@ export const Work = [
       'A Landing Page website build in ReactJS, styledComponents. It has really smooth animations.',
     tags: ['react', 'styledComponents'],
 
-    demo: 'http://gpt-3-design.vercel.app/',
+    demo: 'https://gpt3-design.vercel.app/',
     github: 'https://github.com/RACHID-WEBDEV/UI-UX-GPT-3-DESIGN',
   },
   {
