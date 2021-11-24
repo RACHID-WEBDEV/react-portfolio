@@ -53,8 +53,8 @@ export const Work = [
     id: 6,
     name: 'Roatek Agency Website',
     description:
-      'An Agency Website build with Laravel, Html, Sass for smooth animations.',
-    tags: ['Laravel', 'Blade', 'Sass'],
+      'Roatek Technologies New Agency Website Build with Laravel Framework with smooth animations',
+    tags: ['Laravel', 'BladeTemplate', 'Sass', 'MySql'],
 
     demo: 'https://roatek.com.ng/',
     github: 'https://github.com/RACHID-WEBDEV/roatek-technologies',

@@ -98,6 +98,15 @@ export const Blogs = [
   },
   {
     id: 12,
+    name: 'Free Web Design Offer design for people interested in web design Trainee',
+    tags: ['Sass', 'JavaScript', 'CustomCss', 'Jquery'],
+    date: '5 July, 2021',
+    imgSrc:
+      'https://i.ibb.co/G2S56cF/rachid-webdev-github-io-Large-Screen-1280x800-1.png',
+    link: 'https://rachid-webdev.github.io/free-web-design/',
+  },
+  {
+    id: 13,
     name: 'Beautiful Digital Contacts Profile Card  design with Html, Css and JavaScript',
     tags: ['JavaScript', 'Html', 'CSS'],
     date: '6 July, 2021',
@@ -106,7 +115,7 @@ export const Blogs = [
   },
 
   {
-    id: 13,
+    id: 14,
     name: 'Lovely Effect Basics Calculator Design with Html, Css and JavaScript ',
     tags: ['Html', 'JavaScript', 'Css'],
     date: '5 Jan, 2021',
@@ -115,7 +124,7 @@ export const Blogs = [
     link: 'https://roatek-technologies.github.io/calculator/',
   },
   {
-    id: 14,
+    id: 15,
     name: 'Chat Bot Design Using Monkedev API ',
     tags: ['Axios', 'CustomCss', 'API', 'FontAwesome', 'JavaScript'],
     date: '5 Jan, 2021',
@@ -124,7 +133,7 @@ export const Blogs = [
     link: 'https://roatek-chatbot.netlify.app/',
   },
   {
-    id: 15,
+    id: 16,
     name: 'Boldlinks Academy Trainee Website on Web Development',
     tags: ['MySql', 'Wordpress', 'CustomCss'],
     date: '5 July, 2021',
