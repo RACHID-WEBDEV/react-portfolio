@@ -6,13 +6,14 @@ import styled from 'styled-components';
 const Box = styled(motion(NavLink))`
   width: calc(10rem + 15vw);
   text-decoration: none;
-  height: 20rem;
+  height: 25rem;
   padding: 1rem;
   color: ${props => props.theme.text};
   border: 2px solid ${props => props.theme.text};
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   cursor: pointer;
+  border-radius: 8px;
 
   display: flex;
   flex-direction: column;
@@ -67,12 +68,12 @@ const Tag = styled.span`
     font-size: calc(0.5em + 1vw);
   }
 `;
-const Date = styled.span`
-  padding: 0.5rem 0;
-  @media (max-width: 25em) {
-    font-size: calc(0.5em + 1vw);
-  }
-`;
+// const Date = styled.span`
+//   padding: 0.5rem 0;
+//   @media (max-width: 25em) {
+//     font-size: calc(0.5em + 1vw);
+//   }
+// `;
 
 const Container = styled(motion.div)``;
 
@@ -91,7 +92,7 @@ const Item = {
 };
 
 const BlogComponent = props => {
-  const { name, tags, date, imgSrc, link } = props.blog;
+  const { name, tags, imgSrc, link } = props.blog;
   return (
     <Container variants={Item}>
       <Box target="_blank" to={{ pathname: link }}>
@@ -102,7 +103,7 @@ const BlogComponent = props => {
             return <Tag key={id}>#{t}</Tag>;
           })}
         </HashTags>
-        <Date>{date}</Date>
+        {/* <Date>{date}</Date> */}
       </Box>
     </Container>
   );

@@ -21,13 +21,13 @@ export const Work = [
   },
   {
     id: 3,
-    name: 'Meira Edu Consultant',
+    name: 'Meira Consultant',
     description:
       'Professional Educational Consultant, Study Abroad | Visa Consultant Agency.',
-    tags: ['Wordpress', 'Custom Css', 'Bold Builder'],
+    tags: ['Wordpress', 'Custom Css', 'MySql', 'Bold Builder'],
 
     demo: 'https://meiraconsult.com/',
-    github: 'https://meiraconsult.com/mentorship/',
+    github: 'https://my.bluehost.com/web-hosting/cplogin',
   },
   {
     id: 4,
